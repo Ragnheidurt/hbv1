@@ -37,14 +37,20 @@ public class RecipeController
         return "Recipes";
     }
 
+    @RequestMapping(value = "/recipe")
+    public String method()
+    {
+        return "Recipes";
+    }
+
     //Get method en ekki post?
-    @RequestMapping(value = "/recipe", method = RequestMethod.POST)
+   /* @RequestMapping(value = "/recipe", method = RequestMethod.POST)
     public String recipeViewGet(Model model)
     {
         model.addAttribute("recipe", new Recipe());
         model.addAttribute("recipes", recipeService.findAll());
         return "Recipes";
-    }
+    }*/
 
     /*@RequestMapping(value = "/recipe", method = RequestMethod.POST)
     public void sendRecipe(long id, String email)
