@@ -37,10 +37,10 @@ public class RecipeController
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe")
-    public String method(Model model)
+    @RequestMapping(value = "/recipe/{a}", method = RequestMethod.GET)
+    public String method(@PathVariable("a") int a, Model model)
     {
-        model.addAttribute("recipes", recipeService.findOne(1));
+        model.addAttribute("recipes", recipeService.findByCategory(a));
         return "Recipes";
     }
 
