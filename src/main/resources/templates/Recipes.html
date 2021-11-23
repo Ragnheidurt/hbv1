@@ -2,9 +2,24 @@
 <html xmlns:th="https://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/main.css" />
     <title>Poor, Lonely & Hungry</title>
 </head>
 <body>
-<td th:text="${recipes}"></td>
+
+<article class="post" th:each="recipe : ${recipes}">
+    <header>
+        <div class="title">
+            <h2><a href="/instructions" th:text="${recipe.name}"> </a></h2>
+        </div>
+    </header>
+    <p th:text="${recipe.description}">   </p>
+    <footer>
+        <ul class="actions">
+            <li><a href="/instructions" class="button large">Continue Reading</a></li>
+        </ul>
+    </footer>
+</article>
+
 </body>
 </html>
