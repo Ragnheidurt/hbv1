@@ -38,8 +38,9 @@ public class RecipeController
     }
 
     @RequestMapping(value = "/recipe")
-    public String method()
+    public String method(Model model)
     {
+        model.addAttribute("recipes", recipeService.findOne(1));
         return "Recipes";
     }
 

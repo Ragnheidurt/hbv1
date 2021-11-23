@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RecipeService {
     List<Recipe> findAll();
-    //Recipe findOne(long id);
+    Recipe findOne(long id);
     List<Recipe> findByName(String name);
     //void sendRecipe(long id, String email);*/
 }
