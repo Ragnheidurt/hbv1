@@ -34,7 +34,7 @@ public class RecipeController
     {
         model.addAttribute("recipes", recipeService.findByName(name));
         model.addAttribute("recipe",new Recipe());
-        return "Recipes";
+        return "instructions";
     }
 
     @RequestMapping(value = "/recipe/{a}", method = RequestMethod.GET)
