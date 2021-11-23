@@ -8,7 +8,7 @@ import javax.persistence.Id;
 //generated value?
 @Embeddable
 public class Tags {
-
+/*
     @Id
     private int id;
     private boolean vegan;
@@ -102,5 +102,5 @@ public class Tags {
 
 
 
-
+*/
 }

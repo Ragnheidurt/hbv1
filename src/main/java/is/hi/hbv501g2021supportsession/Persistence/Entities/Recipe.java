@@ -2,7 +2,7 @@ package is.hi.hbv501g2021supportsession.Persistence.Entities;
 
 
 
-import is.hi.hbv501g2021supportsession.Persistence.Entities.Tags;
+//import is.hi.hbv501g2021supportsession.Persistence.Entities.Tags;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
@@ -20,6 +20,13 @@ public class Recipe {
     private int serves;
     private int price;
     private int category;
+    private boolean vegan;
+    private boolean vegetarian;
+    private boolean glutenfree;
+    private boolean dairyfree;
+    private boolean kosher;
+    private boolean keto;
+    private boolean sugarfree;
 
     //Getters & Setters
     public long getID() {
@@ -71,11 +78,84 @@ public class Recipe {
         return category;
     }
 
-    @Embedded
+    public void setVegan(boolean vegan)
+    {
+        this.vegan = vegan;
+    }
+
+    public boolean getVegan()
+    {
+        return vegan;
+    }
+
+    public void setVegetarian(boolean vegetarian)
+    {
+        this.vegetarian = vegetarian;
+    }
+
+    public boolean getVegetarian()
+    {
+        return vegetarian;
+    }
+
+    public void setGlutenfree(boolean glutenfree)
+    {
+        this.glutenfree = glutenfree;
+    }
+
+    public boolean getGlutenfree()
+    {
+        return glutenfree;
+    }
+
+    public void setDairyfree(boolean dairyfree)
+    {
+        this.dairyfree = dairyfree;
+    }
+
+    public boolean getDairyfree()
+    {
+        return dairyfree;
+    }
+
+    public void setKosher(boolean kosher)
+    {
+        this.kosher = kosher;
+    }
+
+    public boolean getKosher()
+    {
+        return kosher;
+    }
+
+    public void setKeto(boolean keto)
+    {
+        this.keto = keto;
+    }
+
+    public boolean getKeto()
+    {
+        return keto;
+    }
+
+    public void setSugarfree(boolean sugarfree)
+    {
+        this.sugarfree = sugarfree;
+    }
+
+    public boolean getSugarfree()
+    {
+        return sugarfree;
+    }
+
+
+    /*@Embedded
     public Tags getTags() {
         return tags;
     }
     public void setTags(Tags tags) {
         this.tags = tags;
     }
+    */
+
 }

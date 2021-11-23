@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.Query;
 import is.hi.hbv501g2021supportsession.Persistence.Entities.Recipe;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import is.hi.hbv501g2021supportsession.Persistence.Entities.Tags;
+//import is.hi.hbv501g2021supportsession.Persistence.Entities.Tags;
 
 import java.util.List;
 

@@ -7,13 +7,7 @@ instructions VARCHAR(4000),
 serves INT,
 price INT,
 category INT,
-tag INT
-);
-
-DROP TABLE IF EXISTS TAGS;
-CREATE TABLE TAGS (
-id INT PRIMARY KEY,
-vegan BOOLEAN, vegetarian BOOLEAN, 
+vegan BOOLEAN,
 vegetarian BOOLEAN,
 glutenfree BOOLEAN,
 dairyfree BOOLEAN,
@@ -21,3 +15,5 @@ kosher BOOLEAN,
 keto BOOLEAN,
 sugarfree BOOLEAN
 );
+
+DOP TABLE IF EXISTS TAGS;

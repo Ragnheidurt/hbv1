@@ -44,7 +44,7 @@ public class RecipeController
     }
 
     //Get method en ekki post?
-   /* @RequestMapping(value = "/recipe", method = RequestMethod.POST)
+   /*@RequestMapping(value = "/recipe", method = RequestMethod.POST)
     public String recipeViewGet(Model model)
     {
         model.addAttribute("recipe", new Recipe());
