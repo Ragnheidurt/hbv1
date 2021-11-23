@@ -17,8 +17,5 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     //@Query(value = "SELECT p FROM recipe p WHERE p.name = 'test'")
     List<Recipe> findByName(String name);
 
-    //@Query(value = "SELECT p FROM Recipe p WHERE p.tags = ?1 AND p.serves = ?2 AND p.price >= ?3 AND p.price <= ?4 AND p.category = ?5")
-    //List<Recipe> findByTags(int tagId, int serves, int priceLow, int priceHigh, int category);
-
     //void sendRecipe(long id, String email);*/
 }

@@ -1,9 +1,5 @@
 package is.hi.hbv501g2021supportsession.Persistence.Entities;
 
-
-
-//import is.hi.hbv501g2021supportsession.Persistence.Entities.Tags;
-
 import javax.persistence.Entity;
 import javax.persistence.*;
 import javax.persistence.GenerationType;
@@ -16,7 +12,7 @@ public class Recipe {
     private long id;
     private String name;
     private String description;
-    private Tags tags;
+    private String instructions;
     private int serves;
     private int price;
     private int category;
@@ -147,15 +143,5 @@ public class Recipe {
     {
         return sugarfree;
     }
-
-
-    /*@Embedded
-    public Tags getTags() {
-        return tags;
-    }
-    public void setTags(Tags tags) {
-        this.tags = tags;
-    }
-    */
 
 }
