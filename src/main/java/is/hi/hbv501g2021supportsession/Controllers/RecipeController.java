@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import is.hi.hbv501g2021supportsession.Persistence.Entities.Recipe;
 import is.hi.hbv501g2021supportsession.Persistence.Repositories.RecipeRepository;
 import is.hi.hbv501g2021supportsession.Services.RecipeService;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
 
 //samræma nöfn á controllerum
 @Controller
