@@ -10,6 +10,14 @@
     <h1>Poor, Lonely & Hungry </h1>
 </header>
 
+<form th:action="@{/search}">
+    <input type="text" name="keyword" id="keyword"  placeholder="Recipe name" size="50" >
+    <br>
+    <button type="submit" class="btn btn-info" >Search</button>
+    <br>
+    <button type="submit" class="btn btn-info" >Clear</button>
+</form>
+
 <!--
 <form action="... or use th:action" method="post" th:object="${vegan}">
 <input type="checkbox" id="vegan" name="vegan" value="true" />

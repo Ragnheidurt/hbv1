@@ -44,6 +44,19 @@ public class RecipeController
         model.addAttribute("recipes", recipeService.findByCategory(a));
         return "Recipes";
     }
+
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public String searchName(Model model, @Param("keyword") String keyword) {
+        if(keyword!=null) {
+            model.addAttribute("recipes", recipeService.findByName(keyword));
+            model.addAttribute("keyword", keyword);
+        } else {
+            List<Recipe> list = recipeService.findAll();
+            model.addAttribute("recipes", recipeService.findAll());
+        }
+        return "Recipes";
+    }
+
 /*
     @RequestMapping(value = "/recipe/{vegan}/{vegetarian}", method = RequestMethod.GET)
     public String recipeGetRecipeFromTags(Model model)
