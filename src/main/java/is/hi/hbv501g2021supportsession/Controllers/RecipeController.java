@@ -1,5 +1,6 @@
 package is.hi.hbv501g2021supportsession.Controllers;
 
+import org.apache.catalina.connector.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,6 +45,16 @@ public class RecipeController
         return "Recipes";
     }
 
+    @RequestMapping(value = "/recipe/{vegan}/{vegetarian}", method = RequestMethod.GET)
+    public String recipeGetRecipeFromTags(Model model)
+    {
+        boolean myBooleanVariable = false;
+        model.addAttribute("myBooleanVariable", recipeService.findByVegan(myBooleanVariable));
+        //model.addAttribute("recipes",recipeService.findByVegetarian(vegetarian));
+        return "Recipes";
+    }
+
+/*
     @RequestMapping(value = "/recipe/{vegan}", method = RequestMethod.GET)
     public String recipeGetRecipeFromTags(@PathVariable("vegan") Boolean vegan, Model model)
     {
@@ -92,6 +103,10 @@ public class RecipeController
         model.addAttribute("recipes",recipeService.findBySugarfree(sugarfree));
         return "Recipes";
     }
+
+ */
+
+
 
 
 

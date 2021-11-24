@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="https://thymeleaf.org">
+<html xmlns:th="https://thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <title>Poor, Lonely & Hungry</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -10,16 +10,22 @@
     <h1>Poor, Lonely & Hungry </h1>
 </header>
 
-<input type="checkbox" id="Vegan" name="Vegan" value="TRUE" />
+<form action="... or use th:action" method="post" th:object="${vegan}">
+<input type="checkbox" id="vegan" name="vegan" value="true" />
 <label>Vegan</label>
 <br>
-<input type="checkbox" id="Vegetarian" name="Vegetarian" value="TRUE" />
+</form>
+<form action="... or use th:action" method="post" th:object="${vegetarian}">
+<input type="checkbox" id="vegetarian" name="vegetarian" value="true" />
 <label>Vegetarian</label>
 <br>
+</form>
+<form action="... or use th:action" method="post" th:object="${glutenfree}">
 <input type="checkbox" id="gluten-free" name="gluten-free" value="TRUE" />
 <label>Gluten-free</label>
 <br>
-<input type="checkbox" id="dairy-free" name="dairy-free" value="dairy-free" />
+</form>
+<input type="checkbox" name="dairy-free" th:checked="${myBooleanVariable}" />
 <label>Dairy-free</label>
 <br>
 <input type="checkbox" id="Kosher" name="Kosher" value="TRUE" />
@@ -30,10 +36,21 @@
 <br>
 <input type="checkbox" id="sugar-free" name="sugar-free" value="TRUE" />
 <label>Sugar-free</label>
+<br>
+<li><a th:href="@{/recipe/{vegan}/{vegetarian}(vegan=${vegan.value}, vegetarian=${vegetarian.value})}" class="button large">Search!</a></li>
+<br>
+</form>
 
-<a th:href="@{/recipe/{a}(a=1)}" type="button">Search!</a>
 
-
+<!--
+<li><a th:href="@{/recipe/{vegan}(vegan=TRUE)}" class="button large">Vegan</a></li>
+<li><a th:href="@{/recipe/{vegetarian}(vegetarian=TRUE)}" class="button large">Vegetarian</a></li>
+<li><a th:href="@{/recipe/{glutenfree}(glutenfree=TRUE)}" class="button large">Gluten-free</a></li>
+<li><a th:href="@{/recipe/{dairyfree}(dairyfree=TRUE)}" class="button large">Dairy-free</a></li>
+<li><a th:href="@{/recipe/{kosher}(kosher=TRUE)}" class="button large">Kosher</a></li>
+<li><a th:href="@{/recipe/{keto}(keto=TRUE)}" class="button large">Keto</a></li>
+<li><a th:href="@{/recipe/{sugarfree}(sugarfree=TRUE)}" class="button large">Sugar-free</a></li>
+-->
 
 <section class="tiles">
     <article class="style1">
