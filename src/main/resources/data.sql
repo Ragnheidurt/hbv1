@@ -1,1 +1,0 @@
-INSERT INTO RECIPE VALUES(1, 'test', 'test', 'test', 1, 1000, 1,  TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE);
