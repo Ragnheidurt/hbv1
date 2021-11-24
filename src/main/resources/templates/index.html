@@ -10,6 +10,7 @@
     <h1>Poor, Lonely & Hungry </h1>
 </header>
 
+<h2>Search by name</h2>
 <form th:action="@{/search}">
     <input type="text" name="keyword" id="keyword"  placeholder="Recipe name" size="50" >
     <br>
@@ -51,7 +52,7 @@
 </form>
 -->
 
-
+<h2>Choose a tag</h2>
 <li><a th:href="@{/recipe1/{vegan}(vegan=true)}" class="button large">Vegan</a></li>
 <li><a th:href="@{/recipe2/{vegetarian}(vegetarian=true)}" class="button large">Vegetarian</a></li>
 <li><a th:href="@{/recipe3/{glutenfree}(glutenfree=true)}" class="button large">Gluten-free</a></li>
@@ -72,6 +73,7 @@
 </form>
 <br>
 -->
+<h2>Search by price</h2>
 <form th:action="@{/findbyprice}">
     <input type="text" name="pricelow" id="pricelow" placeholder="500">
     <br>
@@ -82,6 +84,7 @@
     <input type="submit" value="clear">
 </form>
 
+<h2>Search by serves</h2>
 <form th:action="@{/findbyserves}">
     <input type="text" name="serves1" id="serves1" placeholder="2">
     <br>
