@@ -10,6 +10,7 @@
     <h1>Poor, Lonely & Hungry </h1>
 </header>
 
+<!--
 <form action="... or use th:action" method="post" th:object="${vegan}">
 <input type="checkbox" id="vegan" name="vegan" value="true" />
 <label>Vegan</label>
@@ -40,17 +41,17 @@
 <li><a th:href="@{/recipe/{vegan}/{vegetarian}(vegan=${vegan.value}, vegetarian=${vegetarian.value})}" class="button large">Search!</a></li>
 <br>
 </form>
-
-
-<!--
-<li><a th:href="@{/recipe/{vegan}(vegan=TRUE)}" class="button large">Vegan</a></li>
-<li><a th:href="@{/recipe/{vegetarian}(vegetarian=TRUE)}" class="button large">Vegetarian</a></li>
-<li><a th:href="@{/recipe/{glutenfree}(glutenfree=TRUE)}" class="button large">Gluten-free</a></li>
-<li><a th:href="@{/recipe/{dairyfree}(dairyfree=TRUE)}" class="button large">Dairy-free</a></li>
-<li><a th:href="@{/recipe/{kosher}(kosher=TRUE)}" class="button large">Kosher</a></li>
-<li><a th:href="@{/recipe/{keto}(keto=TRUE)}" class="button large">Keto</a></li>
-<li><a th:href="@{/recipe/{sugarfree}(sugarfree=TRUE)}" class="button large">Sugar-free</a></li>
 -->
+
+
+<li><a th:href="@{/recipe1/{vegan}(vegan=true)}" class="button large">Vegan</a></li>
+<li><a th:href="@{/recipe2/{vegetarian}(vegetarian=true)}" class="button large">Vegetarian</a></li>
+<li><a th:href="@{/recipe3/{glutenfree}(glutenfree=true)}" class="button large">Gluten-free</a></li>
+<li><a th:href="@{/recipe4/{dairyfree}(dairyfree=true)}" class="button large">Dairy-free</a></li>
+<li><a th:href="@{/recipe5/{kosher}(kosher=true)}" class="button large">Kosher</a></li>
+<li><a th:href="@{/recipe6/{keto}(keto=true)}" class="button large">Keto</a></li>
+<li><a th:href="@{/recipe7/{sugarfree}(sugarfree=true)}" class="button large">Sugar-free</a></li>
+
 
 <section class="tiles">
     <article class="style1">

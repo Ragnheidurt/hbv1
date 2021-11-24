@@ -44,7 +44,7 @@ public class RecipeController
         model.addAttribute("recipes", recipeService.findByCategory(a));
         return "Recipes";
     }
-
+/*
     @RequestMapping(value = "/recipe/{vegan}/{vegetarian}", method = RequestMethod.GET)
     public String recipeGetRecipeFromTags(Model model)
     {
@@ -53,58 +53,58 @@ public class RecipeController
         //model.addAttribute("recipes",recipeService.findByVegetarian(vegetarian));
         return "Recipes";
     }
+*/
 
-/*
-    @RequestMapping(value = "/recipe/{vegan}", method = RequestMethod.GET)
-    public String recipeGetRecipeFromTags(@PathVariable("vegan") Boolean vegan, Model model)
+    @RequestMapping(value = "/recipe1/{vegan}", method = RequestMethod.GET)
+    public String recipeGetRecipeFromVegan(@PathVariable("vegan") Boolean vegan, Model model)
     {
-        model.addAttribute("recipes", recipeService.findByVegan(vegan));
+        model.addAttribute("recipes", recipeService.findByVegan(true));
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe/{vegetarian}",method = RequestMethod.GET)
+    @RequestMapping(value = "/recipe2/{vegetarian}",method = RequestMethod.GET)
     public String recipeGetRecipeFromVegetarian(@PathVariable("vegetarian") Boolean vegetarian, Model model)
     {
         model.addAttribute("recipes",recipeService.findByVegetarian(vegetarian));
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe/{glutenfree}", method=RequestMethod.GET)
+    @RequestMapping(value = "/recipe3/{glutenfree}", method=RequestMethod.GET)
     public String recipeGetRecipeFromGlutenfree(@PathVariable("glutenfree") Boolean glutenfree, Model model)
     {
         model.addAttribute("recipes", recipeService.findByGlutenfree(glutenfree));
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe/{dairyfree}", method=RequestMethod.GET)
+    @RequestMapping(value = "/recipe4/{dairyfree}", method=RequestMethod.GET)
     public String recipeGetRecipeFromDairyfree(@PathVariable("dairyfree") Boolean dairyfree, Model model)
     {
         model.addAttribute("recipes",recipeService.findByDairyfree(dairyfree));
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe/{kosher}", method = RequestMethod.GET)
+    @RequestMapping(value = "/recipe5/{kosher}", method = RequestMethod.GET)
     public String recipeGetRecipeFromKosher(@PathVariable("kosher") Boolean kosher, Model model)
     {
         model.addAttribute("recipes", recipeService.findByKosher(kosher));
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe/{keto}", method = RequestMethod.GET)
+    @RequestMapping(value = "/recipe6/{keto}", method = RequestMethod.GET)
     public String recipeGetRecipeFromKeto(@PathVariable("keto") Boolean keto, Model model)
     {
         model.addAttribute("recipes",recipeService.findByKeto(keto));
         return "Recipes";
     }
 
-    @RequestMapping(value = "/recipe/{sugarfree}",method = RequestMethod.GET)
+    @RequestMapping(value = "/recipe7/{sugarfree}",method = RequestMethod.GET)
     public String recipeGetRecipeFromSugarfree( @PathVariable("sugarfree") Boolean sugarfree, Model model)
     {
         model.addAttribute("recipes",recipeService.findBySugarfree(sugarfree));
         return "Recipes";
     }
 
- */
+
 
 
 
