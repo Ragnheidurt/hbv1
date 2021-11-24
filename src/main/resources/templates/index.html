@@ -19,39 +19,6 @@
     <button type="submit" class="btn btn-info" >Clear</button>
 </form>
 
-<!--
-<form action="... or use th:action" method="post" th:object="${vegan}">
-<input type="checkbox" id="vegan" name="vegan" value="true" />
-<label>Vegan</label>
-<br>
-</form>
-<form action="... or use th:action" method="post" th:object="${vegetarian}">
-<input type="checkbox" id="vegetarian" name="vegetarian" value="true" />
-<label>Vegetarian</label>
-<br>
-</form>
-<form action="... or use th:action" method="post" th:object="${glutenfree}">
-<input type="checkbox" id="gluten-free" name="gluten-free" value="TRUE" />
-<label>Gluten-free</label>
-<br>
-</form>
-<input type="checkbox" name="dairy-free" th:checked="${myBooleanVariable}" />
-<label>Dairy-free</label>
-<br>
-<input type="checkbox" id="Kosher" name="Kosher" value="TRUE" />
-<label>Kosher</label>
-<br>
-<input type="checkbox" id="Keto" name="Keto" value="TRUE" />
-<label>Keto</label>
-<br>
-<input type="checkbox" id="sugar-free" name="sugar-free" value="TRUE" />
-<label>Sugar-free</label>
-<br>
-<li><a th:href="@{/recipe/{vegan}/{vegetarian}(vegan=${vegan.value}, vegetarian=${vegetarian.value})}" class="button large">Search!</a></li>
-<br>
-</form>
--->
-
 <h2>Choose a tag</h2>
 <li><a th:href="@{/recipe1/{vegan}(vegan=true)}" class="button large">Vegan</a></li>
 <li><a th:href="@{/recipe2/{vegetarian}(vegetarian=true)}" class="button large">Vegetarian</a></li>
@@ -61,18 +28,7 @@
 <li><a th:href="@{/recipe6/{keto}(keto=true)}" class="button large">Keto</a></li>
 <li><a th:href="@{/recipe7/{sugarfree}(sugarfree=true)}" class="button large">Sugar-free</a></li>
 
-<!--
-<form th:action="@{/findbyprice}">
-    <label for="pricelow">Price low</label>
-    <input type="text" th:value="${pricelow}" id="pricelow" placeholder="500">
-    <span th:pricelow="${pricelow}"></span>
-    <label for="pricehigh">Price high</label>
-    <input type="text" th:value="${pricehigh}" id="pricehigh" placeholder="5000">
-    <span th:pricehigh="${pricehigh}"></span>
-    <input type="submit" value="Search">
-</form>
-<br>
--->
+
 <h2>Search by price</h2>
 <form th:action="@{/findbyprice}">
     <input type="text" name="pricelow" id="pricelow" placeholder="500">

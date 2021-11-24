@@ -14,7 +14,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-//samræma nöfn á controllerum
 @Controller
 
 public class RecipeController
@@ -60,16 +59,6 @@ public class RecipeController
         return "Recipes";
     }
 
-/*
-    @RequestMapping(value = "/recipe/{vegan}/{vegetarian}", method = RequestMethod.GET)
-    public String recipeGetRecipeFromTags(Model model)
-    {
-        boolean myBooleanVariable = false;
-        model.addAttribute("myBooleanVariable", recipeService.findByVegan(myBooleanVariable));
-        //model.addAttribute("recipes",recipeService.findByVegetarian(vegetarian));
-        return "Recipes";
-    }
-*/
     @RequestMapping(value = "/findbyprice", method = RequestMethod.GET)
     public String findByPrice(Model model, @Param("pricelow") int pricelow, @Param("pricehigh") int pricehigh)
     {
@@ -138,20 +127,6 @@ public class RecipeController
         return "Recipes";
     }
 
-
-
-
-
-
-
-    //Get method en ekki post?
-   /*@RequestMapping(value = "/recipe", method = RequestMethod.POST)
-    public String recipeViewGet(Model model)
-    {
-        model.addAttribute("recipe", new Recipe());
-        model.addAttribute("recipes", recipeService.findAll());
-        return "Recipes";
-    }*/
 
     /*@RequestMapping(value = "/recipe", method = RequestMethod.POST)
     public void sendRecipe(long id, String email)
