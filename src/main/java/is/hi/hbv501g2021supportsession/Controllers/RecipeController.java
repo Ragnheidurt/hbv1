@@ -70,11 +70,19 @@ public class RecipeController
         return "Recipes";
     }
 */
+    @RequestMapping(value = "/findbyprice", method = RequestMethod.GET)
+    public String findByPrice(Model model, @Param("pricelow") int pricelow, @Param("pricehigh") int pricehigh)
+    {
+        model.addAttribute("recipes", recipeService.findByPrice(pricelow, pricehigh));
+        model.addAttribute("pricelow",pricelow);
+        model.addAttribute("pricehigh",pricehigh);
+        return "Recipes";
+    }
 
     @RequestMapping(value = "/recipe1/{vegan}", method = RequestMethod.GET)
     public String recipeGetRecipeFromVegan(@PathVariable("vegan") Boolean vegan, Model model)
     {
-        model.addAttribute("recipes", recipeService.findByVegan(true));
+        model.addAttribute("recipes", recipeService.findByVegan(vegan));
         return "Recipes";
     }
 

@@ -60,6 +60,28 @@
 <li><a th:href="@{/recipe6/{keto}(keto=true)}" class="button large">Keto</a></li>
 <li><a th:href="@{/recipe7/{sugarfree}(sugarfree=true)}" class="button large">Sugar-free</a></li>
 
+<!--
+<form th:action="@{/findbyprice}">
+    <label for="pricelow">Price low</label>
+    <input type="text" th:value="${pricelow}" id="pricelow" placeholder="500">
+    <span th:pricelow="${pricelow}"></span>
+    <label for="pricehigh">Price high</label>
+    <input type="text" th:value="${pricehigh}" id="pricehigh" placeholder="5000">
+    <span th:pricehigh="${pricehigh}"></span>
+    <input type="submit" value="Search">
+</form>
+<br>
+-->
+<form th:action="@{/search}">
+    <input type="text" name="pricelow" id="pricelow" placeholder="500">
+    <br>
+    <input type="text" name="pricehigh" id="pricehigh" placeholder="5000">
+    <br>
+    <input type="submit" value="Search">
+    <br>
+    <input type="submit" value="clear">
+</form>
+
 
 <section class="tiles">
     <article class="style1">
