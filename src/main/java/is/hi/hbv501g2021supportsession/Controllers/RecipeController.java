@@ -29,11 +29,11 @@ public class RecipeController
         return "index";
     }
 
-    @RequestMapping(value = "/recipe/{name}", method = RequestMethod.POST)
-    public String recipeGetRecipeFromName(@PathVariable String name, Model model)
+    @RequestMapping(value = "/recipes/{name}", method = RequestMethod.GET)
+    public String recipeGetRecipeFromName(@PathVariable("name") String name, Model model)
     {
-        model.addAttribute("recipes", recipeService.findByName(name));
-        model.addAttribute("recipe",new Recipe());
+        model.addAttribute("recipe", recipeService.findByName(name));
+        //model.addAttribute("recipe",new Recipe());
         return "instructions";
     }
 
@@ -43,6 +43,57 @@ public class RecipeController
         model.addAttribute("recipes", recipeService.findByCategory(a));
         return "Recipes";
     }
+
+    @RequestMapping(value = "/recipe/{vegan}", method = RequestMethod.GET)
+    public String recipeGetRecipeFromTags(@PathVariable("vegan") Boolean vegan, Model model)
+    {
+        model.addAttribute("recipes", recipeService.findByVegan(vegan));
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/recipe/{vegetarian}",method = RequestMethod.GET)
+    public String recipeGetRecipeFromVegetarian(@PathVariable("vegetarian") Boolean vegetarian, Model model)
+    {
+        model.addAttribute("recipes",recipeService.findByVegetarian(vegetarian));
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/recipe/{glutenfree}", method=RequestMethod.GET)
+    public String recipeGetRecipeFromGlutenfree(@PathVariable("glutenfree") Boolean glutenfree, Model model)
+    {
+        model.addAttribute("recipes", recipeService.findByGlutenfree(glutenfree));
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/recipe/{dairyfree}", method=RequestMethod.GET)
+    public String recipeGetRecipeFromDairyfree(@PathVariable("dairyfree") Boolean dairyfree, Model model)
+    {
+        model.addAttribute("recipes",recipeService.findByDairyfree(dairyfree));
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/recipe/{kosher}", method = RequestMethod.GET)
+    public String recipeGetRecipeFromKosher(@PathVariable("kosher") Boolean kosher, Model model)
+    {
+        model.addAttribute("recipes", recipeService.findByKosher(kosher));
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/recipe/{keto}", method = RequestMethod.GET)
+    public String recipeGetRecipeFromKeto(@PathVariable("keto") Boolean keto, Model model)
+    {
+        model.addAttribute("recipes",recipeService.findByKeto(keto));
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/recipe/{sugarfree}",method = RequestMethod.GET)
+    public String recipeGetRecipeFromSugarfree( @PathVariable("sugarfree") Boolean sugarfree, Model model)
+    {
+        model.addAttribute("recipes",recipeService.findBySugarfree(sugarfree));
+        return "Recipes";
+    }
+
+
 
     //Get method en ekki post?
    /*@RequestMapping(value = "/recipe", method = RequestMethod.POST)

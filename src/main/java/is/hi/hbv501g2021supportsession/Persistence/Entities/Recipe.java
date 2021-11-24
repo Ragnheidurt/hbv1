@@ -64,6 +64,16 @@ public class Recipe {
         return price;
     }
 
+    public void setInstructions(String instructions)
+    {
+        this.instructions = instructions;
+    }
+
+    public String getInstructions()
+    {
+        return instructions;
+    }
+
     public void setcategory(int category)
     {
         this.category = category;

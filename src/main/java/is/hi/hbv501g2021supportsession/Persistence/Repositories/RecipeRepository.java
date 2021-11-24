@@ -29,6 +29,7 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     List<Recipe> findByDairyfree(boolean dairyfree);
     List<Recipe> findByKosher(boolean kosher);
     List<Recipe> findBySugarfree(boolean sugarfree);
+    List<Recipe> findByKeto(boolean keto);
 
     //void sendRecipe(long id, String email);
 }

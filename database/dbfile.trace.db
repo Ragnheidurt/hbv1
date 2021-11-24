@@ -4590,3 +4590,6 @@ INSERT INTO RECIPE VALUES(2, 1, 'Pancake Cereal descriptionâ€™, 'Pancake Cerealâ
 2021-11-23 20:50:53 jdbc[34]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO RECIPE VALUES(4, 1, 'Sheepherder'S[*] BREAKFAST DESCRIPTION', 'SHEEPHERDER's Breakfast', 2500, 8, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, 'https://www.tasteofhome.com/recipes/sheepherder-s-breakfast/')"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
 INSERT INTO RECIPE VALUES(4, 1, 'Sheepherder's Breakfast description', 'Sheepherder's Breakfast', 2500, 8, false, true, false, false, true, false, false, 'https://www.tasteofhome.com/recipes/sheepherder-s-breakfast/') [42001-200]
+2021-11-23 22:11:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement ".[*]SCHEMA"; SQL statement:
+.schema [42000-200]

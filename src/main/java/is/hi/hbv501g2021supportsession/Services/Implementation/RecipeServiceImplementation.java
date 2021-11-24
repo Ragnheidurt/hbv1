@@ -78,6 +78,11 @@ public class RecipeServiceImplementation implements RecipeService {
         return repository.findBySugarfree(sugarfree);
     }
 
+    @Override
+    public List<Recipe> findByKeto(boolean keto){
+        return repository.findByKeto(keto);
+    }
+
     /*@Override
     public void sendRecipe(long id, String email) {
         //Eftir að implementa

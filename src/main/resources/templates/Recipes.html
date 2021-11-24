@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="https://thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/assets/main.css" />
     <title>Poor, Lonely & Hungry</title>
 </head>
 <body>
 
-<article class="post" th:each="recipe : ${recipes}">
+<section >
+<article class="style1" th:each="recipe : ${recipes}">
     <header>
         <div class="title">
-            <h2><a th:href="@{/recipe/{name}(name = ${recipe.name})}" th:text="${recipe.name}"> </a> </h2>
+            <h2><a th:href="@{/recipes/{name}(name = ${recipe.name})}" th:text="${recipe.name}"> </a> </h2>
         </div>
     </header>
     <p th:text="${recipe.description}">   </p>
     <footer>
         <ul class="actions">
-            <li><a th:href="@{/recipe/{name}(name = ${recipe.name})}" class="button large">Open Recipe</a></li>
+            <li><a th:href="@{/recipes/{name}(name = ${recipe.name})}" class="button large">Open Recipe</a></li>
         </ul>
     </footer>
 </article>
-
+</section>
 </body>
 </html>
