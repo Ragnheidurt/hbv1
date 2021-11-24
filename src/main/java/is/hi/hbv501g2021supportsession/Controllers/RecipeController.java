@@ -74,8 +74,18 @@ public class RecipeController
     public String findByPrice(Model model, @Param("pricelow") int pricelow, @Param("pricehigh") int pricehigh)
     {
         model.addAttribute("recipes", recipeService.findByPrice(pricelow, pricehigh));
-        model.addAttribute("pricelow",pricelow);
-        model.addAttribute("pricehigh",pricehigh);
+        model.addAttribute("pricelow", pricelow);
+        model.addAttribute("pricehigh", pricehigh);
+        return "Recipes";
+    }
+
+    @RequestMapping(value = "/findbyserves", method = RequestMethod.GET)
+    public String findByServes(Model model, @Param("serves1") int serves1, @Param("serves2") int serves2)
+    {
+        model.addAttribute("recipes", recipeService.findByServes(serves1,serves2));
+        model.addAttribute("serves1", serves1);
+        model.addAttribute("serves2",serves2);
+
         return "Recipes";
     }
 

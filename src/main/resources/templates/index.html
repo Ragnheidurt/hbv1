@@ -72,10 +72,20 @@
 </form>
 <br>
 -->
-<form th:action="@{/search}">
+<form th:action="@{/findbyprice}">
     <input type="text" name="pricelow" id="pricelow" placeholder="500">
     <br>
     <input type="text" name="pricehigh" id="pricehigh" placeholder="5000">
+    <br>
+    <input type="submit" value="Search">
+    <br>
+    <input type="submit" value="clear">
+</form>
+
+<form th:action="@{/findbyserves}">
+    <input type="text" name="serves1" id="serves1" placeholder="2">
+    <br>
+    <input type="text" name="serves2" id="serves2" placeholder="4">
     <br>
     <input type="submit" value="Search">
     <br>
