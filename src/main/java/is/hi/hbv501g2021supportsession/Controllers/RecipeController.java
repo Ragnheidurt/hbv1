@@ -32,6 +32,18 @@ public class RecipeController
         return "index";
     }
 
+    @RequestMapping(value = "/home")
+    public String indexController()
+    {
+        return "index";
+    }
+
+    @RequestMapping(value="/aboutus")
+    public String aboutus()
+    {
+        return "aboutus";
+    }
+
     @RequestMapping(value = "/recipes/{name}", method = RequestMethod.GET)
     public String recipeGetRecipeFromName(@PathVariable("name") String name, Model model)
     {

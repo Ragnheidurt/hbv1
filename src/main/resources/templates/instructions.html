@@ -5,6 +5,7 @@
     <title ></title>
 </head>
 <body>
+<h2><a th:href="@{/}">Poor, Lonely & Hungry</a></h2>
 <h1 th:each="recipe : ${recipe}">
     <h2 th:text="${recipe.name}"></h2>
     <h3 th:text="${recipe.instructions}"></h3>
